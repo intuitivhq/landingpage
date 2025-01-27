@@ -1,115 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intuitiv | AI for Anime & Manhwa</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intuitiv - AI Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="brand">Intuitiv</a>
-            <div class="nav-menu">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#security" class="nav-link">Security</a>
-                <a href="#waitlist" class="nav-link">Waitlist</a>
-                <button class="nav-cta">Early Access →</button>
-            </div>
-        </div>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">Intuitiv</div>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#cta" class="btn-primary">Get Started</a>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="badge">Now in Beta</div>
-                <h1 class="hero-title">
-                    Discover Anime & Manhwa<br>
-                    Through <span class="gradient-text">Conversation</span>
-                </h1>
-                <p class="hero-subtitle">Advanced AI powered by DeepSeek-R1 and AWS Bedrock</p>
-                
-                <!-- Interactive Chat Preview -->
-                <div class="chat-preview">
-                    <div class="message ai-message">
-                        <div class="avatar"></div>
-                        <div class="bubble">
-                            <p>Hi! I'm Si. I can help you:</p>
-                            <ul class="ai-features">
-                                <li>Find similar titles using neural analysis</li>
-                                <li>Track scanlation progress across 50+ sites</li>
-                                <li>Identify series from any screenshot</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="message user-message">
-                        <div class="bubble">
-                            <p>Recommend dark fantasy manhwa with completed scans</p>
-                            <div class="typing-indicator">
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                                <div class="dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Your AI-Powered Chatbot Solution</h1>
+      <p>Intuitiv is the smartest way to automate conversations, answer questions, and engage your users.</p>
+      <div class="cta-buttons">
+        <a href="#cta" class="btn-primary">Try It Free</a>
+        <a href="#features" class="btn-secondary">Learn More</a>
+      </div>
+      <img src="https://via.placeholder.com/800x400" alt="AI Chatbot Interface" class="hero-image">
+    </div>
+  </section>
 
-    <!-- Waitlist Section -->
-    <section id="waitlist" class="waitlist">
-        <div class="container">
-            <div class="waitlist-card">
-                <div class="card-content">
-                    <h2>Join Priority Access</h2>
-                    <p class="card-subtitle">Be among the first to experience next-gen anime discovery</p>
-                    
-                    <form id="waitlist-form" class="waitlist-form">
-                        <div class="form-grid">
-                            <div class="input-group">
-                                <input type="text" id="firstName" required>
-                                <label for="firstName">First Name</label>
-                            </div>
-                            <div class="input-group">
-                                <input type="text" id="lastName" required>
-                                <label for="lastName">Last Name</label>
-                            </div>
-                            <div class="input-group full-width">
-                                <input type="email" id="email" required>
-                                <label for="email">Professional Email</label>
-                            </div>
-                            <div class="input-group full-width">
-                                <select id="useCase" required>
-                                    <option value="">Primary Use Case</option>
-                                    <option>Content Creation</option>
-                                    <option>Scanlation Groups</option>
-                                    <option>Personal Use</option>
-                                    <option>Enterprise</option>
-                                </select>
-                            </div>
-                            <div class="input-group full-width">
-                                <textarea id="featureRequest" rows="4" required></textarea>
-                                <label for="featureRequest">Feature Priorities</label>
-                            </div>
-                        </div>
-                        
-                        <div class="form-footer">
-                            <p class="disclaimer">By submitting, you agree to our <a href="#">privacy policy</a></p>
-                            <button type="submit" class="submit-btn">
-                                <span>Request Access</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Why Choose Intuitiv?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <span class="icon">🤖</span>
+          <h3>Smart AI</h3>
+          <p>Powered by advanced natural language processing to understand and respond like a human.</p>
         </div>
-    </section>
+        <div class="feature-card">
+          <span class="icon">⚡</span>
+          <h3>Fast & Reliable</h3>
+          <p>Instant responses with 99.9% uptime for seamless user experiences.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icon">🔒</span>
+          <h3>Secure</h3>
+          <p>Your data is safe with end-to-end encryption and strict privacy policies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Our Users Say</h2>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"Intuitiv has transformed how we handle customer support. Highly recommend!"</p>
+          <p class="author">– Jane Doe, CEO of XYZ Corp</p>
+        </div>
+        <div class="testimonial-card">
+          <p>"The AI is incredibly intuitive and easy to set up. A game-changer for our business!"</p>
+          <p class="author">– John Smith, Founder of ABC Inc</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2>Simple Pricing</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Basic</h3>
+          <p class="price">$9/month</p>
+          <ul>
+            <li>Up to 1,000 messages</li>
+            <li>Basic AI features</li>
+            <li>Email support</li>
+          </ul>
+          <a href="#cta" class="btn-primary">Get Started</a>
+        </div>
+        <div class="pricing-card highlight">
+          <h3>Pro</h3>
+          <p class="price">$29/month</p>
+          <ul>
+            <li>Up to 10,000 messages</li>
+            <li>Advanced AI features</li>
+            <li>Priority support</li>
+          </ul>
+          <a href="#cta" class="btn-primary">Try It Free</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Enterprise</h3>
+          <p class="price">Custom</p>
+          <ul>
+            <li>Unlimited messages</li>
+            <li>Custom AI models</li>
+            <li>Dedicated account manager</li>
+          </ul>
+          <a href="#contact" class="btn-primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-logo">Intuitiv</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="social-icons">
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
