@@ -1,13 +1,13 @@
+/* Base Styles */
 :root {
-  --primary: hsl(258, 83%, 62%);
-  --secondary: hsl(172, 100%, 38%);
-  --background: hsl(240, 5%, 7%);
-  --surface: hsl(240, 6%, 10%);
-  --border: hsl(240, 5%, 18%);
+  --primary: #7C3AED;
+  --secondary: #00C4A7;
+  --background: #0F172A;
+  --surface: #1E293B;
+  --border: #334155;
   --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
 }
 
-/* Base Styles */
 body {
   background-color: var(--background);
   color: white;
@@ -16,12 +16,12 @@ body {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Glassmorphism Navbar */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -30,20 +30,44 @@ body {
   backdrop-filter: blur(24px);
   z-index: 1000;
   border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
 }
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  font-size: 1.5rem;
   font-weight: 600;
-  font-size: 1.25rem;
+  color: white;
+  text-decoration: none;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 0 20px rgba(124, 58, 237, 0.4));
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-cta {
+  background: var(--gradient);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px);
 }
 
 /* Hero Section */
@@ -63,6 +87,12 @@ body {
   color: transparent;
 }
 
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
 /* Chat Preview */
 .chat-preview {
   background: var(--surface);
@@ -73,6 +103,12 @@ body {
   margin-top: 3rem;
   position: relative;
   backdrop-filter: blur(20px);
+}
+
+.message {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .ai-message .bubble {
@@ -100,7 +136,7 @@ body {
 .typing-indicator .dot {
   width: 8px;
   height: 8px;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   animation: typing 1.4s infinite;
 }
