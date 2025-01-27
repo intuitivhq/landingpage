@@ -1,377 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intuitiv - AI Chatbot</title>
-  <style>
-
-    /* General Styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  line-height: 1.6;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.btn-primary {
-  background: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.btn-primary:hover {
-  background: #0056b3;
-}
-
-.btn-secondary {
-  border: 2px solid #007BFF;
-  color: #007BFF;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background: #007BFF;
-  color: white;
-}
-
-/* Header */
-header {
-  background: #fff;
-  padding: 20px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-header nav ul li {
-  display: inline;
-}
-
-header .btn-primary {
-  margin-left: auto;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 100px 0;
-  background: #f9f9f9;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.hero .cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.hero .hero-image {
-  margin-top: 40px;
-  width: 100%;
-  max-width: 800px;
-  height: auto;
-}
-
-/* Features Section */
-.features {
-  padding: 80px 0;
-  background: #fff;
-}
-
-.features h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.feature-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.feature-card {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.feature-card .icon {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-/* Testimonials Section */
-.testimonials {
-  padding: 80px 0;
-  background: #f9f9f9;
-}
-
-.testimonials h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.testimonial-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.testimonial-card .author {
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Pricing Section */
-.pricing {
-  padding: 80px 0;
-  background: #fff;
-}
-
-.pricing h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.pricing-card {
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-}
-
-.pricing-card.highlight {
-  border: 2px solid #007BFF;
-  transform: scale(1.05);
-}
-
-.pricing-card .price {
-  font-size: 32px;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-.pricing-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.pricing-card ul li {
-  margin: 10px 0;
-}
-
-/* Footer */
-footer {
-  background: #333;
-  color: white;
-  padding: 40px 0;
-  text-align: center;
-}
-
-footer .footer-logo {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-footer .footer-links {
-  margin-bottom: 20px;
-}
-
-footer .footer-links a {
-  margin: 0 10px;
-  color: #ccc;
-}
-
-footer .social-icons a {
-  margin: 0 10px;
-  color: #ccc;
-}
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si - Your Anime & Manhwa AI Companion</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">Intuitiv</div>
-      <nav>
-        <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="#cta" class="btn-primary">Get Started</a>
-    </div>
-  </header>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">Si</div>
+                <div class="space-x-6">
+                    <a href="#features" class="text-gray-600 hover:text-indigo-600">Features</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+                    <a href="https://bit.ly/intsi" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700">Try Si</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Your AI-Powered Chatbot Solution</h1>
-      <p>Intuitiv is the smartest way to automate conversations, answer questions, and engage your users.</p>
-      <div class="cta-buttons">
-        <a href="#cta" class="btn-primary">Try It Free</a>
-        <a href="#features" class="btn-secondary">Learn More</a>
-      </div>
-      <img src="https://via.placeholder.com/800x400" alt="AI Chatbot Interface" class="hero-image">
-    </div>
-  </section>
+    <header class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Your AI Guide to Anime & Manhwa
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Meet Si, the intelligent chatbot that understands everything about anime and manhwa. Get personalized recommendations, discuss plot details, and explore new series.
+        </p>
+        <div class="flex justify-center space-x-4">
+            <a href="https://bit.ly/intsi" class="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg hover:bg-indigo-700">
+                Start Chatting
+            </a>
+            <a href="#demo" class="border border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg text-lg hover:bg-indigo-50">
+                Watch Demo
+            </a>
+        </div>
+    </header>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="container">
-      <h2>Why Choose Intuitiv?</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <span class="icon">🤖</span>
-          <h3>Smart AI</h3>
-          <p>Powered by advanced natural language processing to understand and respond like a human.</p>
+    <section id="features" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">What Si Can Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-indigo-600 text-xl mb-4">🎯 Personalized Recommendations</div>
+                    <p class="text-gray-600">Get tailored suggestions based on your taste, watching history, and preferences.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-indigo-600 text-xl mb-4">💭 Deep Discussions</div>
+                    <p class="text-gray-600">Analyze plots, characters, and themes with an AI that understands context.</p>
+                </div>
+                <div class="p-6 rounded-lg bg-gray-50">
+                    <div class="text-indigo-600 text-xl mb-4">📚 Vast Knowledge</div>
+                    <p class="text-gray-600">Access information about thousands of anime series and manhwa titles.</p>
+                </div>
+            </div>
         </div>
-        <div class="feature-card">
-          <span class="icon">⚡</span>
-          <h3>Fast & Reliable</h3>
-          <p>Instant responses with 99.9% uptime for seamless user experiences.</p>
-        </div>
-        <div class="feature-card">
-          <span class="icon">🔒</span>
-          <h3>Secure</h3>
-          <p>Your data is safe with end-to-end encryption and strict privacy policies.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials">
-    <div class="container">
-      <h2>What Our Users Say</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <p>"Intuitiv has transformed how we handle customer support. Highly recommend!"</p>
-          <p class="author">– Jane Doe, CEO of XYZ Corp</p>
+    <section id="demo" class="max-w-6xl mx-auto px-4 py-20">
+        <div class="bg-gray-900 rounded-xl p-8 text-white">
+            <h3 class="text-2xl font-bold mb-6">Try asking Si:</h3>
+            <div class="space-y-4">
+                <div class="bg-gray-800 p-4 rounded-lg">"What anime should I watch if I loved Attack on Titan?"</div>
+                <div class="bg-gray-800 p-4 rounded-lg">"Can you explain the ending of Neon Genesis Evangelion?"</div>
+                <div class="bg-gray-800 p-4 rounded-lg">"What are the top-rated manhwa of 2024?"</div>
+            </div>
         </div>
-        <div class="testimonial-card">
-          <p>"The AI is incredibly intuitive and easy to set up. A game-changer for our business!"</p>
-          <p class="author">– John Smith, Founder of ABC Inc</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Pricing Section -->
-  <section id="pricing" class="pricing">
-    <div class="container">
-      <h2>Simple Pricing</h2>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Basic</h3>
-          <p class="price">$9/month</p>
-          <ul>
-            <li>Up to 1,000 messages</li>
-            <li>Basic AI features</li>
-            <li>Email support</li>
-          </ul>
-          <a href="#cta" class="btn-primary">Get Started</a>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold mb-4">Si</div>
+                    <p class="text-gray-400">By Intuitiv</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <div class="space-y-2">
+                        <div><a href="#" class="text-gray-400 hover:text-white">Features</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">Pricing</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">API</a></div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Resources</h4>
+                    <div class="space-y-2">
+                        <div><a href="#" class="text-gray-400 hover:text-white">Documentation</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">Blog</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">Support</a></div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <div class="space-y-2">
+                        <div><a href="#" class="text-gray-400 hover:text-white">About</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">Careers</a></div>
+                        <div><a href="#" class="text-gray-400 hover:text-white">Contact</a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="pricing-card highlight">
-          <h3>Pro</h3>
-          <p class="price">$29/month</p>
-          <ul>
-            <li>Up to 10,000 messages</li>
-            <li>Advanced AI features</li>
-            <li>Priority support</li>
-          </ul>
-          <a href="#cta" class="btn-primary">Try It Free</a>
-        </div>
-        <div class="pricing-card">
-          <h3>Enterprise</h3>
-          <p class="price">Custom</p>
-          <ul>
-            <li>Unlimited messages</li>
-            <li>Custom AI models</li>
-            <li>Dedicated account manager</li>
-          </ul>
-          <a href="#contact" class="btn-primary">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <div class="container">
-      <div class="footer-logo">Intuitiv</div>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
-      </div>
-      <div class="social-icons">
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Facebook</a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 </html>
