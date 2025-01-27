@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intuitiv - AI for Anime & Manhwa</title>
+    <title>Intuitiv | AI for Anime & Manhwa Discovery</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Glassmorphism Navbar -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">
-                <img src="logo.svg" alt="Intuitiv">
-                <span>Intuitiv</span>
+            <a href="#" class="brand">
+                <img src="assets/si-logo.svg" class="logo" alt="Intuitiv">
+                <span class="gradient-text">Intuitiv</span>
             </a>
-            <div class="nav-links">
-                <a href="#features">Features</a>
-                <a href="#waitlist">Waitlist</a>
-                <button class="cta-button">Login</button>
+            
+            <div class="nav-menu">
+                <a href="#features" class="nav-link">Capabilities</a>
+                <a href="#security" class="nav-link">Security</a>
+                <a href="#waitlist" class="nav-link">Waitlist</a>
+                <button class="nav-cta">Early Access →</button>
             </div>
         </div>
     </nav>
@@ -27,96 +29,100 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>
-                    <span class="gradient-text">Si</span> - Your AI-Powered<br>
-                    Anime & Manhwa Companion
+                <div class="badge">Now in Beta</div>
+                <h1 class="hero-title">
+                    Discover Anime & Manhwa<br>
+                    Through <span class="gradient-text">Conversation</span>
                 </h1>
-                <p>Natural language interface for discovering, tracking, and analyzing anime content</p>
-                <button class="cta-button primary" onclick="scrollToWaitlist()">Join Waitlist</button>
-            </div>
-            <div class="chat-preview">
-                <div class="chat-message ai">
-                    <div class="avatar"></div>
-                    <div class="bubble">
-                        <p>Hi! I'm Si, your anime assistant. I can help you:</p>
-                        <ul>
-                            <li>Find similar manhwa based on your taste</li>
-                            <li>Track chapter releases</li>
-                            <li>Identify series from screenshots</li>
-                        </ul>
+                <p class="hero-subtitle">Advanced AI powered by DeepSeek-R1 and AWS Bedrock</p>
+                
+                <!-- Interactive Chat Preview -->
+                <div class="chat-preview">
+                    <div class="message ai-message">
+                        <div class="avatar"></div>
+                        <div class="bubble">
+                            <p>Hi! I'm Si. I can help you:</p>
+                            <ul class="ai-features">
+                                <li>Find similar titles using neural analysis</li>
+                                <li>Track scanlation progress across 50+ sites</li>
+                                <li>Identify series from any screenshot</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="message user-message">
+                        <div class="bubble">
+                            <p>Recommend dark fantasy manhwa with completed scans</p>
+                            <div class="typing-indicator">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="chat-message user">
-                    <div class="bubble">
-                        <p>Find me dark fantasy manhwa with completed scans</p>
-                    </div>
+            </div>
+            
+            <!-- 3D Anime-Style AI Visualization -->
+            <div class="hero-visual">
+                <div class="ai-core">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Waitlist Form -->
+    <!-- Waitlist Section -->
     <section id="waitlist" class="waitlist">
         <div class="container">
-            <h2>Join Early Access</h2>
-            <form id="waitlist-form" class="waitlist-form">
-                <div class="form-group">
-                    <input type="text" id="firstName" required>
-                    <label for="firstName">First Name</label>
+            <div class="waitlist-card">
+                <div class="card-content">
+                    <h2>Join Priority Access</h2>
+                    <p class="card-subtitle">Be among the first to experience next-gen anime discovery</p>
+                    
+                    <form id="waitlist-form" class="waitlist-form">
+                        <div class="form-grid">
+                            <div class="input-group">
+                                <input type="text" id="firstName" required>
+                                <label for="firstName">First Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="text" id="lastName" required>
+                                <label for="lastName">Last Name</label>
+                            </div>
+                            <div class="input-group full-width">
+                                <input type="email" id="email" required>
+                                <label for="email">Professional Email</label>
+                            </div>
+                            <div class="input-group full-width">
+                                <select id="useCase" required>
+                                    <option value="">Primary Use Case</option>
+                                    <option>Content Creation</option>
+                                    <option>Scanlation Groups</option>
+                                    <option>Personal Use</option>
+                                    <option>Enterprise</option>
+                                </select>
+                            </div>
+                            <div class="input-group full-width">
+                                <textarea id="featureRequest" rows="4" required></textarea>
+                                <label for="featureRequest">Feature Priorities</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-footer">
+                            <p class="disclaimer">By submitting, you agree to our <a href="#">privacy policy</a></p>
+                            <button type="submit" class="submit-btn">
+                                <span>Request Access</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <input type="text" id="lastName" required>
-                    <label for="lastName">Last Name</label>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email</label>
-                </div>
-                <div class="form-group">
-                    <select id="country" required>
-                        <option value="">Select Country</option>
-                        <option>United States</option>
-                        <option>India</option>
-                        <option>South Korea</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea id="features" rows="4" required></textarea>
-                    <label for="features">What features would you like to see in Si?</label>
-                </div>
-                <button type="submit" class="cta-button primary">Submit Application</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <script>
-        function scrollToWaitlist() {
-            document.getElementById('waitlist').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-        // Google Sheets integration
-        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-        const form = document.getElementById('waitlist-form');
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            
-            fetch(scriptURL, {
-                method: 'POST',
-                body: new FormData(form)
-            })
-            .then(response => {
-                alert('Thank you for joining! We will contact you soon.');
-                form.reset();
-            })
-            .catch(error => {
-                console.error('Error!', error.message);
-                alert('Submission failed. Please try again.');
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
