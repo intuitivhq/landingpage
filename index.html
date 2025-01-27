@@ -12,14 +12,13 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo">
-                <img src="images/intuitiv-logo.svg" alt="Intuitiv">
+                <img src="logo.svg" alt="Intuitiv">
                 <span>Intuitiv</span>
             </a>
             <div class="nav-links">
                 <a href="#features">Features</a>
-                <a href="#tech">Tech</a>
-                <a href="#pricing">Pricing</a>
-                <button class="cta-button">Early Access</button>
+                <a href="#waitlist">Waitlist</a>
+                <button class="cta-button">Login</button>
             </div>
         </div>
     </nav>
@@ -29,76 +28,95 @@
         <div class="container">
             <div class="hero-content">
                 <h1>
-                    <span class="gradient-text">SI</span> - Your AI-Powered<br>
+                    <span class="gradient-text">Si</span> - Your AI-Powered<br>
                     Anime & Manhwa Companion
                 </h1>
-                <p>Discover hidden gems, track releases, and never lose a series again</p>
-                <div class="cta-group">
-                    <button class="cta-button primary">Try Free</button>
-                    <button class="cta-button secondary">Watch Demo</button>
-                </div>
+                <p>Natural language interface for discovering, tracking, and analyzing anime content</p>
+                <button class="cta-button primary" onclick="scrollToWaitlist()">Join Waitlist</button>
             </div>
-            <div class="hero-illustration">
-                <div class="terminal">
-                    <div class="terminal-header">
-                        <div class="buttons">
-                            <span class="red"></span>
-                            <span class="yellow"></span>
-                            <span class="green"></span>
-                        </div>
+            <div class="chat-preview">
+                <div class="chat-message ai">
+                    <div class="avatar"></div>
+                    <div class="bubble">
+                        <p>Hi! I'm Si, your anime assistant. I can help you:</p>
+                        <ul>
+                            <li>Find similar manhwa based on your taste</li>
+                            <li>Track chapter releases</li>
+                            <li>Identify series from screenshots</li>
+                        </ul>
                     </div>
-                    <div class="terminal-body">
-                        <span class="prompt">$</span> si find --similar "Solo Leveling"<br>
-                        <span class="output">🔍 Analyzing 1423 titles...<br>
-                        🎯 Top matches:<br>
-                        1. Omniscient Reader (98% match)<br>
-                        2. The Beginning After The End (95% match)</span>
+                </div>
+                <div class="chat-message user">
+                    <div class="bubble">
+                        <p>Find me dark fantasy manhwa with completed scans</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
+    <!-- Waitlist Form -->
+    <section id="waitlist" class="waitlist">
         <div class="container">
-            <h2>Powered by DeepSeek-R1 & AWS</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-robot"></i>
-                    <h3>Smart Recommendations</h3>
-                    <p>AI-curated suggestions based on art style and plot patterns</p>
+            <h2>Join Early Access</h2>
+            <form id="waitlist-form" class="waitlist-form">
+                <div class="form-group">
+                    <input type="text" id="firstName" required>
+                    <label for="firstName">First Name</label>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-satellite-dish"></i>
-                    <h3>Real-time Tracking</h3>
-                    <p>Instant updates on new chapters and scan status</p>
+                <div class="form-group">
+                    <input type="text" id="lastName" required>
+                    <label for="lastName">Last Name</label>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-camera-retro"></i>
-                    <h3>Visual Search</h3>
-                    <p>Find series from screenshots using AWS Rekognition</p>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
                 </div>
-            </div>
+                <div class="form-group">
+                    <select id="country" required>
+                        <option value="">Select Country</option>
+                        <option>United States</option>
+                        <option>India</option>
+                        <option>South Korea</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="features" rows="4" required></textarea>
+                    <label for="features">What features would you like to see in Si?</label>
+                </div>
+                <button type="submit" class="cta-button primary">Submit Application</button>
+            </form>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="images/intuitiv-logo.svg" alt="Intuitiv" class="footer-logo">
-                    <p>© 2024 Intuitiv<br>AI for Otaku Culture</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">Documentation</a>
-                    <a href="#">API Status</a>
-                    <a href="#">GitHub</a>
-                    <a href="#">Twitter</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <script>
+        function scrollToWaitlist() {
+            document.getElementById('waitlist').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Google Sheets integration
+        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+        const form = document.getElementById('waitlist-form');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(form)
+            })
+            .then(response => {
+                alert('Thank you for joining! We will contact you soon.');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                alert('Submission failed. Please try again.');
+            });
+        });
+    </script>
 </body>
 </html>
